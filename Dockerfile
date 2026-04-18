@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 COPY backend/ .
 
 # Bring in the React build
-COPY --from=frontend-build /frontend/build ./static
+COPY --from=frontend-build /frontend/dist ./static
 
 EXPOSE 7860
 CMD ["python", "app.py"]
